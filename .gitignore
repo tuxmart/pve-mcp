@@ -1,0 +1,8 @@
+/bin/
+/dist/
+*.test
+*.out
+.bootstrap/
+.env*
+!.env.example
+.pve-ca.pem
