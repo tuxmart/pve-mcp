@@ -11,9 +11,10 @@ jobs:
       - uses: actions/setup-go@v7
         with:
           go-version-file: go.mod
-      # Installs golangci-lint only; `make check` below is the single definition of "check".
+      # Used only to install golangci-lint (`run --help` exits 0 without linting);
+      # `make check` below is the single definition of "check".
       - uses: golangci/golangci-lint-action@v9
         with:
           version: v2.15
-          args: --version
+          args: --help
       - run: make check
