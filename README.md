@@ -1,7 +1,6 @@
 # pve-mcp
 
-An [MCP](https://modelcontextprotocol.io) server (stdio) that lets an AI client inspect and operate the VMs in **one Proxmox VE resource pool**. Implements AITOOLS-1.
-
+An [MCP](https://modelcontextprotocol.io) server (stdio) that lets an AI client inspect and operate the VMs in **one Proxmox VE resource pool**.
 Every VM operation first checks that the VMID is a member of the configured pool, and the API token should be granted rights on that pool path only, so the server cannot reach anything else.
 
 ## Tools
@@ -50,3 +49,7 @@ go run ./cmd/pve-mcp
 ```
 
 Logs go to stderr; stdout is the protocol channel.
+
+## License
+
+[MIT](LICENSE)
